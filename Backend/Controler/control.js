@@ -85,7 +85,7 @@ const userCredits = async (req, res) => {
 };
 
 
-const razorpayInstance = new Razorpay({  // ✅ Capital R
+const razorpayInstance = new Razorpay({  
   key_id: process.env.RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
@@ -112,7 +112,7 @@ const PaymentRazorpay = async (req, res) => {
         credits = 10;
         amount = 5;
         break;
-      case 'Business':  // ✅ Fixed typo
+      case 'Business':  
         plan = 'Business';
         credits = 15;
         amount = 11;
@@ -134,7 +134,7 @@ const PaymentRazorpay = async (req, res) => {
     const newTransaction = await transactionmodel.create(transactionData);
     
     const options = {
-      amount: amount * 100,  // ✅ Convert to paise
+      amount: amount * 100,  
       currency: process.env.CURRENCY,
       receipt: newTransaction._id
     };
@@ -170,8 +170,7 @@ const verifyrazorpay = async (req, res) => {
 
     // Fetch order info from Razorpay
     const orderinfo = await razorpayInstance.orders.fetch(razorpay_order_id);
-    console.log('Order status:', orderinfo.status);
-    console.log('Order receipt:', orderinfo.receipt);
+    
 
     if (orderinfo.status !== 'paid') {
       return res.json({ success: false, message: 'Payment not confirmed by Razorpay' });
@@ -181,11 +180,11 @@ const verifyrazorpay = async (req, res) => {
     const transactionData = await transactionmodel.findById(orderinfo.receipt);
     
     if (!transactionData) {
-      console.log('Transaction not found for receipt:', orderinfo.receipt);
+     
       return res.status(404).json({ success: false, message: 'Transaction not found' });
     }
 
-    console.log('Transaction found:', transactionData);
+
 
     // ✅ Fixed: Check if payment already processed
     if (transactionData.payment) {
@@ -199,8 +198,7 @@ const verifyrazorpay = async (req, res) => {
       return res.status(404).json({ success: false, message: 'User not found' });
     }
 
-    console.log('Current credits:', userData.creditBalance);
-    console.log('Adding credits:', transactionData.credits);
+ 
 
     const creditBalance = userData.creditBalance + transactionData.credits;
 
@@ -210,7 +208,6 @@ const verifyrazorpay = async (req, res) => {
     // Mark transaction as paid
     await transactionmodel.findByIdAndUpdate(transactionData._id, { payment: true });
 
-    console.log('✅ Credits updated successfully. New balance:', creditBalance);
 
     return res.json({ 
       success: true, 
