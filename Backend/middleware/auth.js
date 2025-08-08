@@ -18,7 +18,7 @@ const authUser = async (req, res, next) => {
     // Ensure req.body exists for GET requests
     if (!req.body) {
       req.body = {};
-    }
+    } 
 
     // The clerkId might be in different places depending on your Clerk config
     req.body.clerkId = token_decode.clerkId || token_decode.sub || token_decode.userId;

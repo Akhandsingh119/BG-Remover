@@ -326,18 +326,18 @@ class App {
   }
   createMedias(items, bend = 1, textColor, borderRadius, font) {
     const defaultItems = [
-      { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: "Bridge" },
-      { image: `https://picsum.photos/seed/2/800/600?grayscale`, text: "Desk Setup" },
-      { image: `https://picsum.photos/seed/3/800/600?grayscale`, text: "Waterfall" },
-      { image: `https://picsum.photos/seed/4/800/600?grayscale`, text: "Strawberries" },
-      { image: `https://picsum.photos/seed/5/800/600?grayscale`, text: "Deep Diving" },
-      { image: `https://picsum.photos/seed/16/800/600?grayscale`, text: "Train Track" },
-      { image: `https://picsum.photos/seed/17/800/600?grayscale`, text: "Santorini" },
-      { image: `https://picsum.photos/seed/8/800/600?grayscale`, text: "Blurry Lights" },
-      { image: `https://picsum.photos/seed/9/800/600?grayscale`, text: "New York" },
-      { image: `https://picsum.photos/seed/10/800/600?grayscale`, text: "Good Boy" },
-      { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: "Coastline" },
-      { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: "Palm Trees" },
+      { image: `https://images.unsplash.com/photo-1554080353-a576cf803bda?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`, text: "Bridge" },
+      { image: `https://media.istockphoto.com/id/2202349488/photo/woman-exploring-udaipur-city-during-trip-to-india.jpg?s=612x612&w=0&k=20&c=MS1VLfFBvsvKvxyoy7GtnSmghij-NynjYSq22H-cWxI=`, text: "Desk Setup" },
+      { image: `https://images.unsplash.com/photo-1709884735626-63e92727d8b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZnJlZSUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D`, text: "Waterfall" },
+      { image: `https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww`, text: "Strawberries" },
+      { image: `https://images.unsplash.com/photo-1554151228-14d9def656e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D`, text: "Deep Diving" },
+      { image: `https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D`, text: "Train Track" },
+      { image: `https://images.unsplash.com/photo-1751998605697-c7fbcf07f8fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8`, text: "Santorini" },
+      { image: `https://images.unsplash.com/photo-1754629346524-272710ed75e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D`, text: "Blurry Lights" },
+      { image: `https://images.unsplash.com/photo-1754415267107-8a1f75a6a366?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D`, text: "New York" },
+      { image: `https://images.unsplash.com/photo-1750630098132-b7567d2128b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3Mnx8fGVufDB8fHx8fA%3D%3D`, text: "Good Boy" },
+      { image: `https://plus.unsplash.com/premium_photo-1754211654507-e0a561f6b9c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5OHx8fGVufDB8fHx8fA%3D%3D`, text: "Coastline" },
+      { image: `https://images.unsplash.com/photo-1750262701487-4ca222c89ef4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`, text: "Palm Trees" },
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
