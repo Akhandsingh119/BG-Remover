@@ -18,7 +18,7 @@ function App() {
     <div  className='min-h-screen bg-zinc-900
      font-gilro relative overflow-hidden overflow-y-hidden '>
 
-    <ToastContainer position='top -right' />
+    <ToastContainer position='top-right' />
 
   <div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: '0' }}>
 

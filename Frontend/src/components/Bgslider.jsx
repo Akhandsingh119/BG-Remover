@@ -1,13 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
 import { assets } from '../assets/assets';
+import { useContext } from "react";
+import { AppContext } from "../Pages/AppContext";
+
 
 function Bgslider() {
   const [sliderPosition, setSliderPosition] = useState(10);
+  const{removebg} =useContext(AppContext)
+
 
   const handleSliderChange = (e) => {
     setSliderPosition(e.target.value);
   };
+
 
   return (
     <div className="pb-10 md:py-24 mx-2 z-[2] relative">
@@ -44,7 +50,11 @@ function Bgslider() {
       </div>
 
       <div className="w-full flex justify-center items-center mt-9">
-                        <input type="file" id="upload1" hidden />
+                        <input type="file"
+                        onChange={e=>removebg(e.target.files[0])}
+                        id="upload1"
+                         accept="image/*"
+                        hidden />
                         <label
                           htmlFor="upload1"
                           className="inline-flex gap-3 px-8 py-3.5 rounded-full cursor-pointer bg-gradient-to-r from-violet-600 to-fuchsia-500 m-auto hover:scale-105 transition-all duration-700"

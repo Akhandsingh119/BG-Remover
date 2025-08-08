@@ -1,6 +1,18 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useContext } from 'react'
+import { AppContext } from './AppContext'
+import { useNavigate } from 'react-router-dom'
 function Result() {
+
+  const {resultImage,image}=useContext(AppContext)
+   const navigate = useNavigate();
+
+  const handleTryAnother = () => {
+    navigate('/'); // or wherever your main upload page is
+  };
+
+
   return (
     
    <div className='mx-4 my-3 lg:mx-44 mt-14 min-h-[75vh]'>
@@ -12,19 +24,25 @@ function Result() {
           {/* ---------- Left Side ---------- */}
           <div>
             <p className='font-semibold text-gray-600 mb-2'>Original</p>
-            <img className='rounded-md' src={assets.image_w_bg} alt="" />
+            <img className='rounded-md' src={image ?URL.createObjectURL(image):null} alt="" />
           </div>
 
           {/* ------- Right Side ----------- */}
           <div className='flex flex-col'>
             <p className='font-semibold text-gray-600 mb-2' >Background Removed</p>
             <div className='rounded-md border border-gray-300 h-full relative bg-layer overflow-hidden'>
-              <img className="rounded-md" src={assets.image_wo_bg} alt="" />
-               <div className='absolute right-1/2  bottom-1/2 transform translate-x-1/2 translate-y-1/2' > 
-                {/* <div className='border-4 border-violet-400 rounded-full h-12 w-12 border-t-transparent animate-spin  '>
+              <img className="rounded-md" src={resultImage ?resultImage:null} alt="" />
+               
+               {!resultImage && image && <div className='absolute right-1/2  bottom-1/2 transform translate-x-1/2 translate-y-1/2' > 
+                 <div className='border-4 border-violet-400 rounded-full h-12 w-12 border-t-transparent animate-spin  '>
 
-                </div> */}
+                </div> 
                </div>
+               
+               
+               
+               }
+        
             
             </div>
             
@@ -44,10 +62,13 @@ function Result() {
       transition-all duration-700
       font-medium
     "
+     onClick={handleTryAnother}
   >
     Try Another One
   </button>
   <a
+     href={resultImage || undefined}
+  download="background-removed.png"
     className="
       w-full sm:w-auto
       px-4 sm:px-8
@@ -59,7 +80,7 @@ function Result() {
       text-center
       font-medium
     "
-    href=""
+    
   >
     Download image
   </a>
