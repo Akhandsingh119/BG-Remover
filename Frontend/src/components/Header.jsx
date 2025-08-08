@@ -1,8 +1,19 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import TextType from '../bg/TextType/TextType'
+import { useContext } from "react";
+import { AppContext } from "../Pages/AppContext";
 
 function Header() {
+
+
+const{removebg} =useContext(AppContext)
+
+
+
+
+
+
   return (
     <div className="flex items-center justify-center max-sm:flex-col-reverse gap-16 px-4 mt-10 lg:px-44 sm:mt-20 z-10 relative">
       <div className="">
@@ -28,7 +39,12 @@ function Header() {
         </p>
  
         <div className="">
-          <input type="file" id="upload1" hidden />
+          <input 
+           onChange={e=>removebg(e.target.files[0])}
+          type="file" 
+          accept="image/*"
+          
+          id="upload1" hidden />
           <label
             htmlFor="upload1"
             className="inline-flex gap-3 px-8 py-3.5 rounded-full cursor-pointer bg-gradient-to-r from-violet-600 to-fuchsia-500 m-auto hover:scale-105 transition-all duration-700"
