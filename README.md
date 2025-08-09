@@ -6,6 +6,14 @@
 
 A full-stack web application that automatically removes backgrounds from images using AI technology. Built with React frontend and Node.js backend, featuring user authentication, credit-based processing, and seamless image processing.
 
+## 📸 Screenshots
+<p align="center">
+  <img src="Frontend\public\clie\Landingpage.png" alt="Sample 1" width="450" />
+  <img src="Frontend\public\clie\Login.png" alt="Sample 2" width="450" />
+   <img src="Frontend\public\clie\credit.png" alt="Sample 1" width="450" />
+  <img src="Frontend\public\clie\Landingpage.png" alt="Sample 2" width="450" />
+</p>
+
 ## 🌟 Features
 
 - **AI-Powered Background Removal**: Uses ClipDrop API for high-quality background removal
