@@ -2,13 +2,7 @@
   <img src="Frontend/public/clie/Logo.svg" alt="BG Remover Logo" width="120" />
 </p>
 
-<<<<<<< HEAD
 <h1 align="center">🖼️ BG Remover - AI-Powered Background Removal Tool</h1>
-
-A full-stack web application that automatically removes backgrounds from images using AI technology. Built with React frontend and Node.js backend, featuring user authentication, credit-based processing, and seamless image processing.
-
-=======
-<h1 align="center"> BG Remover - AI-Powered Background Removal Tool</h1>
 
 A full-stack web application that automatically removes backgrounds from images using AI technology. Built with React frontend and Node.js backend, featuring user authentication, credit-based processing, and seamless image processing.
 
@@ -20,7 +14,6 @@ A full-stack web application that automatically removes backgrounds from images 
   <img src="Frontend\public\clie\Landingpage.png" alt="Sample 2" width="450" />
 </p>
 
->>>>>>> 309f98a77d60156c8c0e9e08b40b297cc8c1c1c1
 ## 🌟 Features
 
 - **AI-Powered Background Removal**: Uses ClipDrop API for high-quality background removal
@@ -305,13 +298,6 @@ npm test
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-<<<<<<< HEAD
-## 📄 License
-
-This project is licensed under the MIT License.
-
-=======
->>>>>>> 309f98a77d60156c8c0e9e08b40b297cc8c1c1c1
 ## 🤝 Support
 
 For support and questions:
@@ -340,12 +326,6 @@ For support and questions:
 - 🔄 Advanced features
 - 🔄 Testing coverage
 
-<<<<<<< HEAD
----
-=======
-## 📄 License
 
-This project is licensed under the MIT License.
->>>>>>> 309f98a77d60156c8c0e9e08b40b297cc8c1c1c1
 
 **Built with ❤️ using modern web technologies**
