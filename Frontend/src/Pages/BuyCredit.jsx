@@ -92,7 +92,7 @@ function BuyCredit() {
       <div className="flex flex-wrap justify-center gap-6 text-left">
         {plans.map((items, index) => (
           <SpotlightCard
-            key={items.id || index} // ✅ Added key prop
+            key={items.id || index}
             className="custom-spotlight-card drop-shadow-sm rounded-lg py-12 px-8 hover:scale-105 transition-all duration-500"
             spotlightColor="rgba(0, 229, 255, 0.2)"
           >
@@ -100,7 +100,7 @@ function BuyCredit() {
             <p className="mt-3 font-semibold">{items.id}</p>
             <p className="text-sm">{items.desc}</p>
             <p className="mt-6">
-              <span className="text-3xl font-medium">${items.price}</span>/{items.credits}
+              <span className="text-3xl font-medium">₹{items.price}</span>/{items.credits}
             </p>
             <button 
               onClick={() => paymentRazorpay(items.id)} 

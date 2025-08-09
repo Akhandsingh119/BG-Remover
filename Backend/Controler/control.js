@@ -104,18 +104,18 @@ const PaymentRazorpay = async (req, res) => {
     switch (planId) {
       case 'Basic':
         plan = 'Basic';
-        credits = 8;
-        amount = 4;
+        credits = 10;
+        amount = 30;
         break;
       case 'Advanced':
         plan = 'Advanced';
-        credits = 10;
-        amount = 5;
+        credits = 30;
+        amount = 60;
         break;
       case 'Business':  
         plan = 'Business';
-        credits = 15;
-        amount = 11;
+        credits =200 ;
+        amount = 99;
         break;
       default:
         return res.status(400).json({ success: false, message: 'Invalid plan selected' });

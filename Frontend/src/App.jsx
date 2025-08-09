@@ -11,7 +11,9 @@ import Cursor from './ui/Cursor'
 import Footer from './components/Footer'
 
   import { ToastContainer, toast } from 'react-toastify';
+  import LocomotiveScroll from 'locomotive-scroll';
  
+const locomotiveScroll = new LocomotiveScroll();
 
 function App() {
   return (

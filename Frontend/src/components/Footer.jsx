@@ -47,7 +47,7 @@ function Footer() {
             {/* Description and logo section - centered */}
             <div className="basis-full sm:basis-1/2 flex flex-col items-center">
               <p className="text-center text-sm sm:text-base leading-relaxed">
-                Refokus is pioneering digital agency driven by design and empowered by technology.
+                bg remover is cutting-edge photo solution driven by innovation and empowered by AI technology.
               </p>
               <Link to="/" className="hover:opacity-80 transition-opacity">
                 <img 
