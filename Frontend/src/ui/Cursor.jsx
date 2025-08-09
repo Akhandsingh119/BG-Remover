@@ -19,7 +19,7 @@ const Cursor = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, []);  
 
   return (
     <div
