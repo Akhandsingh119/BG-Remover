@@ -11,7 +11,7 @@ A full-stack web application that automatically removes backgrounds from images 
   <img src="Frontend\public\clie\Landingpage.png" alt="Sample 1" width="450" />
   <img src="Frontend\public\clie\Login.png" alt="Sample 2" width="450" />
    <img src="Frontend\public\clie\credit.png" alt="Sample 1" width="450" />
-  <img src="Frontend\public\clie\Landingpage.png" alt="Sample 2" width="450" />
+  <img src="Frontend\public\clie\Result.png" alt="Sample 2" width="450" />
 </p>
 
 ## 🌟 Features
